@@ -50,7 +50,7 @@ Replace the placeholders as follows:
    The script presents the progress updates in a clear and concise manner, making it easy for users to understand and track the restoration progress.
 
 7. **Utilizing Unexplored Monitoring Options:**
-   One of the unique advantages of this script is that it addresses the lack of built-in monitoring tools for restoring mysqldump and mydumper backups. By leveraging the /proc file system and custom process detection, the script provides an efficient solution for monitoring the restore process.
+   One of the unique advantages of this script is that it addresses the lack of built-in monitoring tools for restoring mysqldump and mydumper backups. By leveraging the Linux native I/O statistics and custom process detection, the script provides an efficient solution for monitoring the restore process.
 
 ## Important Notes
 
