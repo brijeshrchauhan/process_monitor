@@ -29,28 +29,28 @@ Replace the placeholders as follows:
 
     The script will continuously display the progress of the restoration process, including the progress bar, percentage, current speed, and estimated time of completion (ETA).
 
-### Features
+## Features
 
-1. Flexible Backup Type Support:
+1. **Flexible Backup Type Support:**
    The script supports two popular backup types - mysqldump and mydumper. Users can choose their preferred backup type by providing the 'backup_type' argument during script execution.
 
-2. Customizable Progress Update Interval:
+2. **Customizable Progress Update Interval:**
    The script allows users to set the 'progress_interval' argument to define the time interval (in seconds) at which the restoration progress will be displayed. This gives users the flexibility to monitor progress as frequently as needed.
 
-    Easy Backup File Location Input:
-    The 'backup_file' argument allows users to specify the location of the backup file used for restoration. The script automatically detects the restore process associated with the provided backup file, simplifying the monitoring process.
+3. **Easy Backup File Location Input:**
+   The 'backup_file' argument allows users to specify the location of the backup file used for restoration. The script automatically detects the restore process associated with the provided backup file, simplifying the monitoring process.
 
-    Intelligent Process Detection:
-    The script intelligently detects the MySQL restore process running for the specified backup file. It analyzes the system's active processes and identifies the restore process for accurate monitoring.
+4. **Intelligent Process Detection:**
+   The script intelligently detects the MySQL restore process running for the specified backup file. It analyzes the system's active processes and identifies the restore process for accurate monitoring.
 
-    Real-Time Progress Updates:
-    Once the restore process is detected, the script continuously monitors its progress. At each interval specified by 'progress_interval', the script displays the progress, providing real-time updates on the restoration process.
+5. **Real-Time Progress Updates:**
+   Once the restore process is detected, the script continuously monitors its progress. At each interval specified by 'progress_interval', the script displays the progress, providing real-time updates on the restoration process.
 
-    User-Friendly Output:
-    The script presents the progress updates in a clear and concise manner, making it easy for users to understand and track the restoration progress.
+6. **User-Friendly Output:**
+   The script presents the progress updates in a clear and concise manner, making it easy for users to understand and track the restoration progress.
 
-    Utilizing Unexplored Monitoring Options:
-    One of the unique advantages of this script is that it addresses the lack of built-in monitoring tools for restoring mysqldump and mydumper backups. By leveraging the /proc file system and custom process detection, the script provides an efficient solution for monitoring the restore process.
+7. **Utilizing Unexplored Monitoring Options:**
+   One of the unique advantages of this script is that it addresses the lack of built-in monitoring tools for restoring mysqldump and mydumper backups. By leveraging the /proc file system and custom process detection, the script provides an efficient solution for monitoring the restore process.
 
 ## Important Notes
 
