@@ -31,11 +31,11 @@ Replace the placeholders as follows:
 
 ### Features
 
-    Flexible Backup Type Support:
-    The script supports two popular backup types - mysqldump and mydumper. Users can choose their preferred backup type by providing the 'backup_type' argument during script execution.
+1. Flexible Backup Type Support:
+   The script supports two popular backup types - mysqldump and mydumper. Users can choose their preferred backup type by providing the 'backup_type' argument during script execution.
 
-    Customizable Progress Update Interval:
-    The script allows users to set the 'progress_interval' argument to define the time interval (in seconds) at which the restoration progress will be displayed. This gives users the flexibility to monitor progress as frequently as needed.
+2. Customizable Progress Update Interval:
+   The script allows users to set the 'progress_interval' argument to define the time interval (in seconds) at which the restoration progress will be displayed. This gives users the flexibility to monitor progress as frequently as needed.
 
     Easy Backup File Location Input:
     The 'backup_file' argument allows users to specify the location of the backup file used for restoration. The script automatically detects the restore process associated with the provided backup file, simplifying the monitoring process.
