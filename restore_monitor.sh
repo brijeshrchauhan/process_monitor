@@ -161,6 +161,9 @@ get_restore_speed() {
 
         restore_speed=$((io_bytes_read_new - io_bytes_read))
 	restore_speed_second=$((restore_speed/progress_interval))
+	restore_speed_second_mb=$((restore_speed_second/(1024*1024)))
+	formatted_restore_speed_second_mb=$(awk -v restore_speed=$restore_speed -v interval=$progress_interval 'BEGIN { printf "%.2f", restore_speed / (1024 * 1024 * interval) }')
+#	formatted_restore_speed_second_mb=$(printf %.2f $restore_speed_second_mb)
 
 	io_bytes_read_prev=$io_bytes_read_new
 
@@ -195,7 +198,7 @@ function display_progress() {
     local spaces=$(printf "%0.s " $(seq 1 "$((width - num_blocks))"))
 
     # Display the progress bar and percentage
-    echo -ne "\r${YELLOW}Progress: ${MAGENTA}[$((io_bytes_read/(1024*1024))) MiB]${NC} ${CYAN}[${bar}${spaces}]${NC} ${GREEN}${percent}%${NC}  ${MAGENTA}[$((restore_speed_second/(1024*1024))) MiB/s]${NC}  ${GREEN}ETA: $formatted_eta${NC}"
+    echo -ne "\r${YELLOW}Progress: ${MAGENTA}[$((io_bytes_read/(1024*1024))) MiB]${NC} ${CYAN}[${bar}${spaces}]${NC} ${GREEN}${percent}%${NC}  ${MAGENTA}[$formatted_restore_speed_second_mb MiB/s]${NC}  ${GREEN}ETA: $formatted_eta${NC}"
 
 }
 
