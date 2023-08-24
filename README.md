@@ -44,7 +44,7 @@ The script will continuously display the progress of the restoration process, in
    The script intelligently detects the MySQL restore process running for the specified backup file. It analyzes the system's active processes and identifies the restore process for accurate monitoring.
 
 5. **Real-Time Progress Updates:**
-   Once the restore process is detected, the script continuously monitors its progress. At each interval specified by 'progress_interval', the script displays the progress, providing real-time updates on the restoration process.
+   Once the restore process is detected, the script continuously monitors its progress. At each interval specified by 'progress_interval', the script displays the progress of the restoration process, including the progress bar, percentage, current speed, and estimated time of completion (ETA).
 
 6. **User-Friendly Output:**
    The script presents the progress updates in a clear and concise manner, making it easy for users to understand and track the restoration progress.
@@ -70,8 +70,9 @@ In this example, the script will monitor the restoration progress of the mydumpe
 
 Here is an example output of running the script:
 
-```bash
+```
 ./restore_monitor.sh --backup_file=/path/to/backup/backup.sql --progress_interval=10 --backup_type=mysqldump
 Progress: [959 MiB] [=================================                                               ] 41.19%  [5 MiB/s]  ETA: 00:23:00
+```
 
 In this example output, the script restore_monitor.sh is executed with the provided parameters. The script displays real-time progress information of a mysqldump restoration process. The progress bar indicates that 41.19% of the restoration is completed, with a current speed of 5 MiB/s. The estimated time of completion (ETA) is shown as 00:23:00 (HH:MM:SS).
