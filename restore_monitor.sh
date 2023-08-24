@@ -3,7 +3,7 @@
 #
 # Script Name: restore_monitor.sh
 # Description: A shell script designed to monitor the progress of a data restoration process. It calculates the estimated time of completion (ETA) based on data growth rate and provides real-time updates on the restore progress, helping administrators track restoration status efficiently.
-# Author: Brijesh Chauhan
+# Author: Brijesh Chauhan (https://www.linkedin.com/in/brijesh-chauhan/)
 # Date: August 22, 2023
 #
 
