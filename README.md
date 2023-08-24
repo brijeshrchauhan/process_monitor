@@ -66,6 +66,12 @@ Here's an example of how to use the script:
 
 In this example, the script will monitor the restoration progress of the mydumper backup located in /path/to/backup/directory, with progress updates every 10 seconds.
 
-## Disclaimer
+## Example Output
 
-This script is provided as-is without any warranties. Use it at your own risk.
+Here is an example output of running the script:
+
+```bash
+./restore_monitor.sh --backup_file=/path/to/backup/backup.sql --progress_interval=10 --backup_type=mysqldump
+Progress: [959 MiB] [=================================                                               ] 41.19%  [5 MiB/s]  ETA: 00:23:00
+
+In this example output, the script restore_monitor.sh is executed with the provided parameters. The script displays real-time progress information of a mysqldump restoration process. The progress bar indicates that 41.19% of the restoration is completed, with a current speed of 5 MiB/s. The estimated time of completion (ETA) is shown as 00:23:00 (HH:MM:SS).
