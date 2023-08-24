@@ -27,7 +27,7 @@ Replace the placeholders as follows:
     --progress_interval: The interval in seconds for progress updates.
     --backup_type: The backup type, either mysqldump or mydumper.
 
-    The script will continuously display the progress of the restoration process, including the progress bar, percentage, current speed, and estimated time of completion (ETA).
+The script will continuously display the progress of the restoration process, including the progress bar, percentage, current speed, and estimated time of completion (ETA).
 
 ## Features
 
@@ -54,8 +54,8 @@ Replace the placeholders as follows:
 
 ## Important Notes
 
-    Ensure you have the necessary permissions to execute the script and access the backup file or directory.
-    The script is designed to work with MySQL backups created using mysqldump or mydumper.
+Ensure you have the necessary permissions to execute the script and access the backup file or directory.
+The script is designed to work with MySQL backups created using mysqldump or mydumper.
 
 ## Example
 
