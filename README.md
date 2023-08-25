@@ -55,15 +55,6 @@ The script will continuously display the progress of the restoration process, in
 Ensure you have the necessary permissions to execute the script and access the backup file or directory.
 The script is designed to work with MySQL backups created using mysqldump or mydumper.
 
-## Example
-
-Here's an example of how to use the script:
-```
-./restore_monitor.sh --backup_file=/path/to/backup/directory --progress_interval=10 --backup_type=mydumper
-```
-
-In this example, the script will monitor the restoration progress of the mydumper backup located in /path/to/backup/directory, with progress updates every 10 seconds.
-
 ## Example Output
 
 Here is an example output of running the script:
@@ -72,5 +63,10 @@ Here is an example output of running the script:
 ./restore_monitor.sh --backup_file=/path/to/backup/backup.sql --progress_interval=5 --backup_type=mysqldump
 Progress: [1119 MiB] [========================================                                        ] 50.06%  [11.27 MiB/s]  ETA: 00:10:26
 ```
-
 In this example output, the script restore_monitor.sh is executed with the provided parameters. The script displays real-time progress information of a mysqldump restoration process. The progress bar indicates that 1119 MB of data is restored, 50.06% of the restoration is completed, with a current speed of 11.27 MiB/s. The estimated time of completion (ETA) is 00:10:26 (HH:MM:SS).
+
+## Note
+
+The estimated time to restore (ETA) provided here, is assumed to be a consistent restore speed. However, it's important to note that the actual restore speed can vary due to a multitude of factors. Factors such as system load, disk I/O contention, network congestion, disk caching, and other variables can influence the restore speed.
+
+As a result, the ETA presented should be considered as a rough estimate and not an exact prediction. The actual time taken to complete the restore process may be longer or shorter than the calculated ETA. It's recommended to use the calculated ETA as a general guideline while keeping in mind the potential variability in restore speed due to these factors.
