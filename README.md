@@ -2,9 +2,7 @@
 
 ## Description
 
-**restore_monitor.sh** is a shell script designed to monitor the progress of a data restoration process. It calculates the estimated time of completion (ETA) based on data growth rate and provides real-time updates on the restore progress, helping administrators track restoration status efficiently.
-
-The "Restore Progress Monitor" is a powerful shell script designed to monitor the progress of MySQL backup restoration using either mysqldump or mydumper backup files. This script provides an easy-to-use and automated way to track the restoration progress and display updates at regular intervals, making it a valuable tool for users who need to restore large-scale MySQL backups and want to keep track of the progress.
+The **Restore Monitor Script** is a powerful script designed to monitor the progress of MySQL backup restoration using either mysqldump or mydumper backup files. This script provides an easy-to-use and automated way to track the restoration progress, calculates the estimated time of completion (ETA) based on data growth rate and provides real-time updates on the restore progress, making it a valuable tool for administrators who need to restore large-scale MySQL backups and want to keep track of the progress.
 
 ## Author
 
