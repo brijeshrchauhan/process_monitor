@@ -42,7 +42,7 @@ The script will continuously display the progress of the restoration process, in
    The script intelligently detects the MySQL restore process running for the specified backup file. It analyzes the system's active processes and identifies the restore process for accurate monitoring.
 
 5. **Real-Time Progress Updates:**
-   Once the restore process is detected, the script continuously monitors its progress. At each interval specified by 'progress_interval', the script displays the progress of the restoration process, including the progress bar, percentage, current speed, and estimated time of completion (ETA).
+   Once the restore process is detected, the script continuously monitors its progress. At each interval specified by 'progress_interval', the script displays the progress of the restoration process, including the amount of data restored, progress bar, percentage, current speed, and estimated time of completion (ETA).
 
 6. **User-Friendly Output:**
    The script presents the progress updates in a clear and concise manner, making it easy for users to understand and track the restoration progress.
@@ -70,7 +70,7 @@ Here is an example output of running the script:
 
 ```bash
 ./restore_monitor.sh --backup_file=/path/to/backup/backup.sql --progress_interval=5 --backup_type=mysqldump
-Progress: [1166 MiB] [========================================                                        ] 50.06%  [11.27 MiB/s]  ETA: 00:10:26
+Progress: [1119 MiB] [========================================                                        ] 50.06%  [11.27 MiB/s]  ETA: 00:10:26
 ```
 
-In this example output, the script restore_monitor.sh is executed with the provided parameters. The script displays real-time progress information of a mysqldump restoration process. The progress bar indicates that 50.06% of the restoration is completed, with a current speed of 11.27 MiB/s. The estimated time of completion (ETA) is shown as 00:10:26 (HH:MM:SS) and total 1166 MB data restored.
+In this example output, the script restore_monitor.sh is executed with the provided parameters. The script displays real-time progress information of a mysqldump restoration process. The progress bar indicates that 1119 MB of data is restored, 50.06% of the restoration is completed, with a current speed of 11.27 MiB/s. The estimated time of completion (ETA) is 00:10:26 (HH:MM:SS).
