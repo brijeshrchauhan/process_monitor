@@ -74,7 +74,7 @@ if [ "$#" -eq 3 ]; then
 	fi
     fi
 else
-    echo -e "\n${RED}USAGE: ./restore_progress.sh --backup_file=</full_path/file_name> --progress_interval=<interval_in_seconds> --backup_type=<mysqldump/mydumper>${NC}\n"
+    echo -e "\n${RED}USAGE: ./restore_monitor.sh --backup_file=</full_path/file_name> --progress_interval=<interval_in_seconds> --backup_type=<mysqldump/mydumper>${NC}\n"
     exit 1
 fi
 
