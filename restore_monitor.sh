@@ -131,7 +131,7 @@ get_file_sizes() {
 
 	if [ -d $backup_file ]; then
 		#num_of_dirs=`ls -l $backup_file *.sql* | grep -c "^d"`
-		num_of_dirs=`find /root/mydumper_backup -name "*.sql" -type d | wc -l`
+		num_of_dirs=`find $backup_file -name "*.sql" -type d | wc -l`
 		if [[ $num_of_dirs > 1 ]]; then
 			echo -e "\n${RED}Warning: The provided mydumper backup directory $backup_file is invalid. It contains multiple directories.${NC}\n"
 			exit 1;
