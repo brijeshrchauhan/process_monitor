@@ -136,7 +136,7 @@ get_file_sizes() {
 			echo -e "\n${RED}Warning: The provided mydumper backup directory $backup_file is invalid. It contains multiple directories.${NC}\n"
 			exit 1;
 		else
-		    	size2=$(find $backup_file -name "*.sql*" -type f -exec du -cb {} + | grep total$ | awk '{print $1}')
+		    	size2=$(find $backup_file -name "*.sql*" -type f -exec du -cb {} + | awk '$2 == "total" {total += $1} END {print total}')
 		fi
 	else
 		echo -e "\n${RED}Warning: The provided mydumper backup directory $backup_file is invalid. Please ensure you provide a valid mydumper backup directory\n${NC}"
